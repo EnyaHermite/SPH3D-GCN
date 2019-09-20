@@ -1,0 +1,4 @@
+Airplane/1659db64bbf46bcdc1955ee4b5680e91: num of singular points #1
+Airplane/1abe9524d3d38a54f49a51dc77a0dd59: num of singular points #1
+Airplane/28448469f5bce47b4ddd8a480b571bd7: num of singular points #0
+Airplane/2c1fff0653854166e7a636089598229: num of singular points #1
