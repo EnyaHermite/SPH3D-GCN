@@ -45,27 +45,33 @@ Our code is released under MIT License (see LICENSE file for details).
 ### Usage
 
 - ModelNet
-`cd io`  
-`python make_tfrecord_modelnet.py`  
-`cd modelnet40_cls`  
-`python train_modelnet.py`  
-`python evaluate_modelnet.py` --num_votes=12  
+```
+cd io
+python make_tfrecord_modelnet.py 
+cd modelnet40_cls 
+python train_modelnet.py  
+python evaluate_modelnet.py --num_votes=12  
+```
 
-- ShapeNet
+- ShapeNet  
 run `preprocessing/shapenet_removeSingularPoints.m` in matlab  
-`cd io`  
-`python make_tfrecord_shapenet.py`  
-`cd shapenet_seg`  
-`python train_shapenet.py --shape_name=Table`  
-`python evaluate_modelnet.py`  
+```
+cd io   
+python make_tfrecord_shapenet.py    
+cd shapenet_seg   
+python train_shapenet.py --shape_name=Table    
+python evaluate_modelnet.py  
+```
 
 - RueMonge2014
 run `preprocessing/ruemonge2014_prepare_data.m` in matlab  
-`cd io`  
-`python make_tfrecord_ruemonge2014.py`  
-`cd ruemonge2014_seg`  
-`python train_ruemonge2014.py`  
-`python evaluate_ruemonge2014.py`  
+```
+cd io 
+python make_tfrecord_ruemonge2014.py    
+cd ruemonge2014_seg    
+python train_ruemonge2014.py  
+python evaluate_ruemonge2014.py  
+```
 
 - ScanNet V2
 run `preprocessing/scannet_prepare_data.m` in matlab  
