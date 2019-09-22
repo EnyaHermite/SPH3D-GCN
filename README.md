@@ -40,15 +40,15 @@ Our code is released under MIT License (see LICENSE file for details).
 
 ### Usage
 
--ModelNet
+- ModelNet
 
--ShapeNet
+- ShapeNet
 
--RueMonge2914
+- RueMonge2914
 
--ScanNet V2
+- ScanNet V2
 
--S3DIS
+- S3DIS
 
 
 # ...... incomplete Code, ReadMe in construction ......
