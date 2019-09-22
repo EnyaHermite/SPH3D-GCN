@@ -5,7 +5,9 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_path', required=True, help='path to the directory of the point cloud dataset')
-dataDir = parser.parse_args()
+INFO = parser.parse_args()
+dataDir = INFO.data_path
+print(INFO,dataDir)
 
 rootDir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(rootDir,'tf_ops/sampling'))

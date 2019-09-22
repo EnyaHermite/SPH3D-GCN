@@ -6,7 +6,9 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_path', required=True, help='path to the directory of the point cloud dataset')
-dataDir = parser.parse_args()
+INFO = parser.parse_args()
+dataDir = INFO.data_path
+print(INFO,dataDir)
 
 rootDir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(rootDir,'tf_ops/sampling'))
@@ -247,7 +249,7 @@ def make_tfrecord_seg(buildPath, block_point_num_thresh=10000,
 if __name__=='__main__':
     block_size = 1.5
     interval = block_size/2
-    store_folder = os.path.join(rootDir, 'data/s3dis_3cm')
+    store_folder = os.path.join(rootDir, 'data/s3dis_3cm_overlap')
     if not os.path.exists(store_folder):
         os.mkdir(store_folder)
 
