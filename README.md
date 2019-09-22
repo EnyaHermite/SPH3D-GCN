@@ -4,7 +4,7 @@ Created by Huan Lei, Naveed Akhtar and Ajmal Mian
 ![alt text](https://github.com/hlei-ziyan/SPH3D-GCN/blob/master/image/intro_arch.png)
 
 ### Introduction
-This work is based on our [Arxiv paper](https://arxiv.org/submit/2851732).
+This work is an extension of CVPR2019 work, presente in the [Arxiv paper](https://arxiv.org/submit/2851732).
 
 We propose a spherical kernel for efficient graph convolution of 3D point clouds. 
 Our metric-based kernels systematically quantize the local 3D space 
@@ -19,6 +19,12 @@ In this repository, we release code and trained models for classification and se
 ### Citation
 If you find our work useful in your research, please consider citing:
 
+@article{lei2019octree,
+title={Octree guided CNN with Spherical Kernels for 3D Point Clouds},
+author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},
+journal={IEEE Conference on Computer Vision and Pattern Recognition},
+year={2019}
+}
 @article{lei2019spherical,
   title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},
   author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},
