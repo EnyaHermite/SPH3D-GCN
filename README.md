@@ -28,13 +28,27 @@ year={2019}
 @article{lei2019spherical,
 title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},
 author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},
-journal={},
+journal={arXiv preprint arXiv:1920.07872},
 year={2019}
 }
+
+### License
+Our code is released under MIT License (see LICENSE file for details).
 
 ### Installation
 
 
 ### Usage
+
+-ModelNet
+
+-ShapeNet
+
+-RueMonge2914
+
+-ScanNet V2
+
+-S3DIS
+
 
 # ...... incomplete Code, ReadMe in construction ......
