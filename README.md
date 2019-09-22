@@ -1,4 +1,4 @@
-## *Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds*
+## SPH3d-GCN: *Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds*
 created by Huan Lei, Naveed Akhtar and Ajmal Mian
 
 ### Introduction
