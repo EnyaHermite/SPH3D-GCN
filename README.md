@@ -19,18 +19,18 @@ In this repository, we release code and trained models for classification and se
 ### Citation
 If you find our work useful in your research, please consider citing:
 
-@article{lei2019octree,
-title={Octree guided CNN with Spherical Kernels for 3D Point Clouds},
-author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},
-journal={IEEE Conference on Computer Vision and Pattern Recognition},
-year={2019}
-}
-@article{lei2019spherical,
-title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},
-author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},
-journal={arXiv preprint arXiv:1920.xxxxx},
-year={2019}
-}
+@article{lei2019octree,  
+title={Octree guided CNN with Spherical Kernels for 3D Point Clouds},  
+author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
+journal={IEEE Conference on Computer Vision and Pattern Recognition},  
+year={2019}  
+}  
+@article{lei2019spherical,  
+title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},  
+author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
+journal={arXiv preprint arXiv:1920.xxxxx},  
+year={2019}  
+}  
 
 ### License
 Our code is released under MIT License (see LICENSE file for details).
@@ -41,39 +41,47 @@ Our code is released under MIT License (see LICENSE file for details).
 ### Usage
 
 - ModelNet
-`cd io`
-`python make_tfrecord_modelnet.py`
-`cd modelnet40_cls`
-`python train_modelnet.py`
-`python evaluate_modelnet.py` --num_votes=12
+`cd io`  
+`python make_tfrecord_modelnet.py`  
+`cd modelnet40_cls`  
+`python train_modelnet.py`  
+`python evaluate_modelnet.py` --num_votes=12  
 
 - ShapeNet
-run `preprocessing/shapenet_removeSingularPoints.m` in matlab
-`cd io`
-`python make_tfrecord_shapenet.py`
-`cd shapenet_seg`
-`python train_shapenet.py --shape_name=Table`
-`python evaluate_modelnet.py` --num_votes=12
+run `preprocessing/shapenet_removeSingularPoints.m` in matlab  
+`cd io`  
+`python make_tfrecord_shapenet.py`  
+`cd shapenet_seg`  
+`python train_shapenet.py --shape_name=Table`  
+`python evaluate_modelnet.py`  
 
 - RueMonge2014
-run `preprocessing/ruemonge2014_prepare_data.m` in matlab
-`cd io`
-`python make_tfrecord_ruemonge2014.py`
-`cd ruemonge2014_seg`
-`python train_ruemonge2014.py`
-`python evaluate_ruemonge2014.py`
+run `preprocessing/ruemonge2014_prepare_data.m` in matlab  
+`cd io`  
+`python make_tfrecord_ruemonge2014.py`  
+`cd ruemonge2014_seg`  
+`python train_ruemonge2014.py`  
+`python evaluate_ruemonge2014.py`  
 
 - ScanNet V2
-run `preprocessing/scannet_prepare_data.m` in matlab
-`cd io`
-`python make_tfrecord_scannet.py`
-`cd scannet_seg`
-`python train_scannet.py`
-`python evaluate_scannet_with_overlap.py`
-`python scannet_block2index_with_overlap.py`
-run `post-merging/scannet_merge.m` in matlab
+run `preprocessing/scannet_prepare_data.m` in matlab  
+`cd io`  
+`python make_tfrecord_scannet.py`  
+`cd scannet_seg`  
+`python train_scannet.py`  
+`python evaluate_scannet_with_overlap.py`  
+`python scannet_block2index_with_overlap.py`  
+run `post-merging/scannet_merge.m` in matlab  
 
 - S3DIS
-
+run `preprocessing/s3dis_prepare_data.m` in matlab  
+`cd io`  
+`python make_tfrecord_s3dis.py`  
+`python make_tfrecord_s3dis_no_split.py`  
+`cd s3dis_seg`  
+`python train_s3dis.py`  
+`python evaluate_s3dis_with_overlap.py --model_name=xxxx`  
+`python s3dis_block2index_with_overlap.py`  
+run `post-merging/s3dis_merge.m` in matlab  
 
 # ...... incomplete Code, ReadMe in construction ......
