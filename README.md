@@ -44,7 +44,7 @@ Our code is released under MIT License (see LICENSE file for details).
 
 - ShapeNet
 
-- RueMonge2914
+- RueMonge2014
 
 - ScanNet V2
 
