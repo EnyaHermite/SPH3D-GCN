@@ -26,10 +26,10 @@ journal={IEEE Conference on Computer Vision and Pattern Recognition},
 year={2019}
 }
 @article{lei2019spherical,
-  title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},
-  author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},
-  journal={},
-  year={2019}
+title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},
+author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},
+journal={},
+year={2019}
 }
 
 ### Installation
