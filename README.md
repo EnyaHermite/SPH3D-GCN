@@ -1,5 +1,5 @@
 ## *Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds*
-### PointNet: *Deep Learning on Point Sets for 3D Classification and Segmentation*
+### *Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds*
 created by Huan Lei, Naveed Akhtar and Ajmal Mian
 
 ### Introduction
