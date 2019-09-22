@@ -63,7 +63,7 @@ python train_shapenet.py --shape_name=Table
 python evaluate_modelnet.py  
 ```
 
-- RueMonge2014
+- RueMonge2014  
 run `preprocessing/ruemonge2014_prepare_data.m` in matlab  
 ```
 cd io 
@@ -73,7 +73,7 @@ python train_ruemonge2014.py
 python evaluate_ruemonge2014.py  
 ```
 
-- ScanNet V2
+- ScanNet V2  
 run `preprocessing/scannet_prepare_data.m` in matlab  
 ```
 `cd io`  
@@ -85,7 +85,7 @@ python scannet_block2index_with_overlap.py
 ```
 run `post-merging/scannet_merge.m` in matlab  
 
-- S3DIS
+- S3DIS  
 run `preprocessing/s3dis_prepare_data.m` in matlab  
 ```
 cd io  
