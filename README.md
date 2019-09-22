@@ -75,23 +75,27 @@ python evaluate_ruemonge2014.py
 
 - ScanNet V2
 run `preprocessing/scannet_prepare_data.m` in matlab  
+```
 `cd io`  
-`python make_tfrecord_scannet.py`  
-`cd scannet_seg`  
-`python train_scannet.py`  
-`python evaluate_scannet_with_overlap.py`  
-`python scannet_block2index_with_overlap.py`  
+python make_tfrecord_scannet.py  
+cd scannet_seg  
+python train_scannet.py  
+python evaluate_scannet_with_overlap.py  
+python scannet_block2index_with_overlap.py    
+```
 run `post-merging/scannet_merge.m` in matlab  
 
 - S3DIS
 run `preprocessing/s3dis_prepare_data.m` in matlab  
-`cd io`  
-`python make_tfrecord_s3dis.py`  
-`python make_tfrecord_s3dis_no_split.py`  
-`cd s3dis_seg`  
-`python train_s3dis.py`  
-`python evaluate_s3dis_with_overlap.py --model_name=xxxx`  
-`python s3dis_block2index_with_overlap.py`  
+```
+cd io  
+python make_tfrecord_s3dis.py    
+python make_tfrecord_s3dis_no_split.py    
+cd s3dis_seg  
+python train_s3dis.py    
+python evaluate_s3dis_with_overlap.py --model_name=xxxx    
+python s3dis_block2index_with_overlap.py
+```
 run `post-merging/s3dis_merge.m` in matlab  
 
 # ...... incomplete Code, ReadMe in construction ......
