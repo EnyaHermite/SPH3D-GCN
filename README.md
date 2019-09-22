@@ -19,18 +19,18 @@ In this repository, we release code and trained models for classification and se
 ### Citation
 If you find our work useful in your research, please consider citing:
 
-@article{lei2019octree,  
+``@article{lei2019octree,  
 title={Octree guided CNN with Spherical Kernels for 3D Point Clouds},  
 author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
 journal={IEEE Conference on Computer Vision and Pattern Recognition},  
 year={2019}  
-}  
-@article{lei2019spherical,  
+}``    
+``@article{lei2019spherical,  
 title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},  
 author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
 journal={arXiv preprint arXiv:1920.xxxxx},  
 year={2019}  
-}  
+}``
 
 ### License
 Our code is released under MIT License (see LICENSE file for details).
