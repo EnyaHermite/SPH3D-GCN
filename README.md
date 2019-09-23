@@ -29,10 +29,10 @@ If you find our work useful in your research, please consider citing:
 ```
 ```
 @article{lei2019spherical,  
-title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},  
-author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
-journal={arXiv preprint arXiv:1909.09287},  
-year={2019}  
+  title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},  
+  author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
+  journal={arXiv preprint arXiv:1909.09287},  
+  year={2019}  
 }
 ```
 
