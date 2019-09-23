@@ -42,9 +42,9 @@ Our code is released under MIT License (see LICENSE file for details).
 ### Installation
 Install [Tensorflow](https://www.tensorflow.org/install). The code was tested with Python 3.5, Tensorflow 1.12.0, Cuda 9.0 and Cudnn 7.1.3 on Ubuntu 16.04.
 Please compile the cuda-based operations in tf-ops folder using the command
-``
+```
 (sudo) ./compile.sh
-``
+```
 
 ### Data Preparation
 We use Matlab to fullfil the preprocessing of the datasets, such as downsampling via voxelization.
