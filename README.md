@@ -47,7 +47,8 @@ Please compile the cuda-based operations in tf-ops folder using the command
 ```
 
 ### Data Preparation
-We use Matlab to fullfil the preprocessing of the datasets, such as downsampling via voxelization.
+Install [Matlab](https://au.mathworks.com/products/matlab.html). 
+We use Matlab to fullfil the preprocessing of the datasets, such as grid-based downsampling.
 
 ### Usage
 
