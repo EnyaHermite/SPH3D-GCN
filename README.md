@@ -4,7 +4,7 @@ Created by Huan Lei, Naveed Akhtar and Ajmal Mian
 ![alt text](https://github.com/hlei-ziyan/SPH3D-GCN/blob/master/image/intro_arch.png)
 
 ### Introduction
-This work is based on our [Arxiv tech report](https://arxiv.org/submit/2851732), which is a **significant** extension of [our CVPR2019 paper](http://openaccess.thecvf.com/content_CVPR_2019/html/Lei_Octree_Guided_CNN_With_Spherical_Kernels_for_3D_Point_Clouds_CVPR_2019_paper.html).
+This work is based on our [Arxiv tech report](https://arxiv.org/abs/1909.09287), which is a **significant** extension of [our CVPR2019 paper](http://openaccess.thecvf.com/content_CVPR_2019/html/Lei_Octree_Guided_CNN_With_Spherical_Kernels_for_3D_Point_Clouds_CVPR_2019_paper.html).
 
 We propose a spherical kernel for efficient graph convolution of 3D point clouds. 
 Our metric-based kernels systematically quantize the local 3D space 
@@ -31,7 +31,7 @@ year={2019}
 @article{lei2019spherical,  
 title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},  
 author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
-journal={arXiv preprint arXiv:1920.xxxxx},  
+journal={arXiv preprint arXiv:1909.09287},  
 year={2019}  
 }
 ```
@@ -76,7 +76,7 @@ python evaluate_ruemonge2014.py
 - ScanNet V2  
 run `preprocessing/scannet_prepare_data.m` in matlab  
 ```
-`cd io`  
+cd io  
 python make_tfrecord_scannet.py  
 cd scannet_seg  
 python train_scannet.py  
