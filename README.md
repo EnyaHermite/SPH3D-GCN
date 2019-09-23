@@ -12,7 +12,7 @@ to identify distinctive geometric relationships in the data. Similar to the regu
 The proposed kernel is applied to graph neural networks without edge-dependent filter generation, making it computationally attractive for large point clouds. 
 In our graph networks, each vertex is associated with a single point location and edges connect the neighborhood points within a defined range. The graph gets coarsened in the network with farthest point sampling. 
 Analogous to the standard CNNs, we define pooling and unpooling operations for our network. 
-We demonstrate the effectiveness of the proposed spherical kernel with graph neural networks for point cloud classification and semantic segmentation  using ModelNet, ShapeNet, RueMonge2014, ScanNet and S3DIS datasets.
+We demonstrate the effectiveness of the proposed spherical kernel with graph neural networks for point cloud classification and semantic segmentation using ModelNet, ShapeNet, RueMonge2014, ScanNet and S3DIS datasets.
 
 In this repository, we release code and trained models for classification and segmentation.
 
@@ -40,7 +40,10 @@ year={2019}
 Our code is released under MIT License (see LICENSE file for details).
 
 ### Installation
+We implement our operations in **Tensorflow 1.12.0**.
 
+### Data Preparation
+We use Matlab to fullfil the preprocessing of the datasets, such as downsampling via voxelization.
 
 ### Usage
 
