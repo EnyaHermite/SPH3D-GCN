@@ -51,7 +51,7 @@ Install [Matlab](https://au.mathworks.com/products/matlab.html).
 We use Matlab to fullfil the preprocessing of the datasets, such as grid-based downsampling.
 
 ### Trained models & results
-The trained models and our results on ShapeNet and S3DIS can be downloaded from [the link](https://drive.google.com/open?id=1-085Tp4RI3eNbZSlOUo7T_F2qcjB8JeE).
+The trained models and our results on ShapeNet and S3DIS can be downloaded from [this link](https://drive.google.com/open?id=1-085Tp4RI3eNbZSlOUo7T_F2qcjB8JeE).
 
 ### Usage
 
