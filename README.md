@@ -48,7 +48,7 @@ Please compile the cuda-based operations in tf-ops folder using the command
 
 ### Data Preparation
 Install [Matlab](https://au.mathworks.com/products/matlab.html). 
-We use Matlab to fullfil the preprocessing of the datasets, such as grid-based downsampling.
+We use Matlab to preprocess the datasets, such as grid-based downsampling.
 
 ### Trained models & results
 The trained models and our results on ShapeNet and S3DIS can be downloaded from [this link](https://drive.google.com/open?id=1-085Tp4RI3eNbZSlOUo7T_F2qcjB8JeE).
