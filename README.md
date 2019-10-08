@@ -124,7 +124,7 @@ python make_tfrecord_s3dis_no_split.py
     python s3dis_block2index_with_overlap.py
     ```
 ### Merging
-The datasets are trained and tested with smaller blocks. We merge them back into complete scenes using functions in the folder ***post-merging*** in Matlab.
+The datasets are trained and tested with small blocks. We merge them back into complete scenes using functions under the folder ***post-merging*** in Matlab.
 ```
 post-merging/scannet_merge.m
 post-merging/s3dis_merge.m
