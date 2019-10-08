@@ -47,8 +47,7 @@ Please compile the cuda-based operations in tf-ops folder using the command
 ```
 
 ### Data Preparation
-Install [Matlab](https://au.mathworks.com/products/matlab.html). 
-We use Matlab to preprocess the datasets, such as grid-based downsampling.
+You may need to install [Matlab](https://au.mathworks.com/products/matlab.html). It is required to preprocess the datasets, such as the grid-based downsampling.
 
 ### Trained models & results
 The trained models and our results on ShapeNet and S3DIS can be downloaded from [this link](https://drive.google.com/open?id=1-085Tp4RI3eNbZSlOUo7T_F2qcjB8JeE).
@@ -64,8 +63,9 @@ python train_modelnet.py
 python evaluate_modelnet.py --num_votes=12  
 ```
 
-- ShapeNet  
-run `preprocessing/shapenet_removeSingularPoints.m` in matlab  
+- ShapeNet 
+Preprocess in Matlab with 
+```preprocessing/shapenet_removeSingularPoints.m``` 
 ```
 cd io   
 python make_tfrecord_shapenet.py    
@@ -75,7 +75,8 @@ python evaluate_modelnet.py
 ```
 
 - RueMonge2014  
-run `preprocessing/ruemonge2014_prepare_data.m` in matlab  
+Preprocess in Matlab with 
+  ```preprocessing/ruemonge2014_prepare_data.m```
 ```
 cd io 
 python make_tfrecord_ruemonge2014.py    
@@ -84,8 +85,11 @@ python train_ruemonge2014.py
 python evaluate_ruemonge2014.py  
 ```
 
-- ScanNet V2  
-run `preprocessing/scannet_prepare_data.m` in matlab  
+- ScanNet V2 
+Download the [ScanNet dataset](https://github.com/ScanNet/ScanNet).
+prepare the dataset by running the following function in Matlab:
+```preprocessing/scannet_prepare_data.m```
+
 ```
 cd io  
 python make_tfrecord_scannet.py  
@@ -94,10 +98,12 @@ python train_scannet.py
 python evaluate_scannet_with_overlap.py  
 python scannet_block2index_with_overlap.py    
 ```
-run `post-merging/scannet_merge.m` in matlab  
+merge the block predictions into complete scenes by running the following function in Matlab:
+```post-merging/scannet_merge.m```
 
 - S3DIS  
-run `preprocessing/s3dis_prepare_data.m` in matlab  
+prepare the dataset by running the following function in Matlab:
+```preprocessing/s3dis_prepare_data.m```
 ```
 cd io  
 python make_tfrecord_s3dis.py    
@@ -107,6 +113,7 @@ python train_s3dis.py
 python evaluate_s3dis_with_overlap.py --model_name=xxxx    
 python s3dis_block2index_with_overlap.py
 ```
-run `post-merging/s3dis_merge.m` in matlab  
+merge the block predictions into complete scenes by running the following function in Matlab:
+```post-merging/s3dis_merge.m```
 
 # ...... ReadMe in construction ......
