@@ -95,16 +95,16 @@ python train_ruemonge2014.py
 python evaluate_ruemonge2014.py  --model_name=xxxx    
 ```
 
-- ScanNet V2   
+* ScanNet V2   
 Download the [ScanNet dataset](https://github.com/ScanNet/ScanNet).
-*train 
+  * train 
 ```
 cd io  
 python make_tfrecord_scannet.py  
 cd scannet_seg  
 python train_scannet.py  
 ```
-*test 
+  * test 
 ```
 python evaluate_scannet_with_overlap.py  --model_name=xxxx    
 python scannet_block2index_with_overlap.py    
