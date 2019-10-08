@@ -97,23 +97,20 @@ python evaluate_ruemonge2014.py  --model_name=xxxx
 
 - ScanNet V2   
 Download the [ScanNet dataset](https://github.com/ScanNet/ScanNet).
-train . 
+*train 
 ```
 cd io  
 python make_tfrecord_scannet.py  
 cd scannet_seg  
 python train_scannet.py  
 ```
-test . 
+*test 
 ```
 python evaluate_scannet_with_overlap.py  --model_name=xxxx    
 python scannet_block2index_with_overlap.py    
 ```
-merge the block predictions into complete scenes by running the following function in Matlab:
-```post-merging/scannet_merge.m```
-
 - S3DIS    
-train . 
+--train 
 ```
 cd io  
 python make_tfrecord_s3dis.py    
@@ -129,7 +126,7 @@ python s3dis_block2index_with_overlap.py
 ### Merging
 The datasets are trained and tested with smaller blocks. We merge them back into complete scenes using functions in the folder **post-merging** in Matlab.
 ```
-preprocessing/s3dis_prepare_data.m
+post-merging/scannet_merge.m
 post-merging/s3dis_merge.m
 ```
 
