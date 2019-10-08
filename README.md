@@ -83,14 +83,14 @@ python evaluate_modelnet.py  --shape_name=Table  --model_name=xxxx
 ```
 
 - RueMonge2014   
-train . 
+  * train 
 ```
 cd io 
 python make_tfrecord_ruemonge2014.py    
 cd ruemonge2014_seg    
 python train_ruemonge2014.py  
 ```
-test . 
+  * test 
 ```
 python evaluate_ruemonge2014.py  --model_name=xxxx    
 ```
