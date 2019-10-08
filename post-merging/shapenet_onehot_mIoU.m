@@ -1,9 +1,5 @@
 function shapenet_onehot_mIoU(dataDir,resultDir)
 
-
-% recompute the evaluation metrics
-% dataDir = '/media/huanlei/Data/Datasets/processed_shapenet_03';
-% resultDir = '/media/huanlei/Data/PycharmProjects/psicnn_v2/shapenet_seg/results_182';
 [shapenames,folders,numparts,cumtotals] = textread(fullfile(dataDir,'class_info_all.txt'),'%s %s %d %d\n');
 for k = 1:numel(folders)
     field = sprintf('f%s',folders{k});
