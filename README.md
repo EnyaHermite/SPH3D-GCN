@@ -54,7 +54,7 @@ preprocessing/ruemonge2014_prepare_data.m.m
 preprocessing/scannet_prepare_data.m
 preprocessing/s3dis_prepare_data.m
 ```
-Make tfrecord data for training and testing
+And then transform the \*.txt files to tfrecord format for fast data feeding in Tensorflow:
 ```
 cd io
 python make_tfrecord_modelnet.py 
