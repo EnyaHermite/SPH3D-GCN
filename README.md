@@ -63,8 +63,8 @@ python train_modelnet.py
 python evaluate_modelnet.py --num_votes=12  
 ```
 
-- ShapeNet 
-Preprocess in Matlab with 
+- ShapeNet   
+Preprocess in Matlab with   
 ```preprocessing/shapenet_removeSingularPoints.m``` 
 ```
 cd io   
@@ -74,8 +74,8 @@ python train_shapenet.py --shape_name=Table
 python evaluate_modelnet.py  
 ```
 
-- RueMonge2014  
-Preprocess in Matlab with 
+- RueMonge2014   
+Preprocess in Matlab with   
   ```preprocessing/ruemonge2014_prepare_data.m```
 ```
 cd io 
@@ -85,9 +85,9 @@ python train_ruemonge2014.py
 python evaluate_ruemonge2014.py  
 ```
 
-- ScanNet V2 
+- ScanNet V2   
 Download the [ScanNet dataset](https://github.com/ScanNet/ScanNet).
-prepare the dataset by running the following function in Matlab:
+prepare the dataset by running the following function in Matlab:  
 ```preprocessing/scannet_prepare_data.m```
 
 ```
@@ -101,8 +101,8 @@ python scannet_block2index_with_overlap.py
 merge the block predictions into complete scenes by running the following function in Matlab:
 ```post-merging/scannet_merge.m```
 
-- S3DIS  
-prepare the dataset by running the following function in Matlab:
+- S3DIS    
+prepare the dataset by running the following function in Matlab:  
 ```preprocessing/s3dis_prepare_data.m```
 ```
 cd io  
@@ -113,7 +113,7 @@ python train_s3dis.py
 python evaluate_s3dis_with_overlap.py --model_name=xxxx    
 python s3dis_block2index_with_overlap.py
 ```
-merge the block predictions into complete scenes by running the following function in Matlab:
+merge the block predictions into complete scenes by running the following function in Matlab:  
 ```post-merging/s3dis_merge.m```
 
 # ...... ReadMe in construction ......
