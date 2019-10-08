@@ -85,7 +85,7 @@ All of the trained models and our results on ShapeNet and S3DIS can be downloade
     cd shapenet_seg   
     python train_shapenet.py --shape_name=Table 
     ```
-  * To test thesegmentation performance of the trained model:
+  * To test the segmentation performance of the trained model:
     ```
     python evaluate_modelnet.py  --shape_name=Table  --model_name=xxxx    
     ```
