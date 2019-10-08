@@ -39,7 +39,8 @@ If you find our work useful in your research, please consider citing:
 Our code is released under MIT License (see LICENSE file for details).
 
 ### Installation
-Install [Tensorflow](https://www.tensorflow.org/install). The code was tested with Python 3.5, Tensorflow 1.12.0, Cuda 9.0 and Cudnn 7.1.4 on Ubuntu 16.04. The used GPU is NVIDIA Titan XP. **Note: in the implementation of the new tensorlfow operators, we assume that the GPU supports a block of 1024 threads. You may revise to make it compatible with your GPU card.**    
+Install [Tensorflow](https://www.tensorflow.org/install). The code was tested with Python 3.5, Tensorflow 1.12.0, Cuda 9.0 and Cudnn 7.1.4 on Ubuntu 16.04. The used GPU is NVIDIA Titan XP.   
+**Note: while implementing the new tensorlfow operators, we assumed that the GPU supports a block of 1024 threads. 
   
 Please compile the cuda-based operations in tf-ops folder using the command
 ```
