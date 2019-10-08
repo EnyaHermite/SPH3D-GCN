@@ -54,6 +54,16 @@ preprocessing/ruemonge2014_prepare_data.m.m
 preprocessing/scannet_prepare_data.m
 preprocessing/s3dis_prepare_data.m
 ```
+Make tfrecord data for training and testing
+```
+cd io
+python make_tfrecord_modelnet.py 
+python make_tfrecord_shapenet.py  
+python make_tfrecord_ruemonge2014.py   
+python make_tfrecord_scannet.py  
+python make_tfrecord_s3dis.py    
+python make_tfrecord_s3dis_no_split.py 
+```
 
 ### Trained models & results
 The trained models and our results on ShapeNet and S3DIS can be downloaded from [this link](https://drive.google.com/open?id=1-085Tp4RI3eNbZSlOUo7T_F2qcjB8JeE).
@@ -63,8 +73,6 @@ The trained models and our results on ShapeNet and S3DIS can be downloaded from 
 - ModelNet
   * To train a model to classify the 40 object classes:
     ```
-    cd io
-    python make_tfrecord_modelnet.py 
     cd modelnet40_cls 
     python train_modelnet.py  
     ```
@@ -76,8 +84,6 @@ The trained models and our results on ShapeNet and S3DIS can be downloaded from 
 - ShapeNet   
   * To train a model to segment parts of the ***Table*** Category:
     ```
-    cd io   
-    python make_tfrecord_shapenet.py    
     cd shapenet_seg   
     python train_shapenet.py --shape_name=Table 
     ```
@@ -89,8 +95,6 @@ The trained models and our results on ShapeNet and S3DIS can be downloaded from 
 - RueMonge2014   
   * train 
     ```
-    cd io 
-    python make_tfrecord_ruemonge2014.py    
     cd ruemonge2014_seg    
     python train_ruemonge2014.py  
     ```
@@ -102,23 +106,18 @@ The trained models and our results on ShapeNet and S3DIS can be downloaded from 
 - ScanNet V2   
   Download the [ScanNet dataset](https://github.com/ScanNet/ScanNet).
   * train 
-    ```
-    cd io  
-    python make_tfrecord_scannet.py  
+    ```  
     cd scannet_seg  
     python train_scannet.py  
-  ```
-  * test 
+    ```
+  * test
     ```
     python evaluate_scannet_with_overlap.py  --model_name=xxxx    
     python scannet_block2index_with_overlap.py    
     ```
 - S3DIS    
   * train  
-    ```
-    cd io  
-    python make_tfrecord_s3dis.py    
-    python make_tfrecord_s3dis_no_split.py    
+    ```   
     cd s3dis_seg  
     python train_s3dis.py    
     ```
@@ -128,10 +127,8 @@ The trained models and our results on ShapeNet and S3DIS can be downloaded from 
     python s3dis_block2index_with_overlap.py
     ```
 ### Merging
-The datasets are trained and tested with smaller blocks. We merge them back into complete scenes using functions in the folder **post-merging** in Matlab.
+The datasets are trained and tested with smaller blocks. We merge them back into complete scenes using functions in the folder ***post-merging*** in Matlab.
 ```
 post-merging/scannet_merge.m
 post-merging/s3dis_merge.m
 ```
-
-# ...... ReadMe in construction ......
