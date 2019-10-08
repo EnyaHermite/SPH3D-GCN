@@ -20,14 +20,6 @@ In this repository, we release code and trained models for classification and se
 If you find our work useful in your research, please consider citing:
 
 ```
-@article{lei2019octree,  
-  title={Octree guided CNN with Spherical Kernels for 3D Point Clouds},  
-  author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
-  journal={IEEE Conference on Computer Vision and Pattern Recognition},  
-  year={2019}  
-}  
-```
-```
 @article{lei2019spherical,  
   title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},  
   author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
@@ -35,7 +27,14 @@ If you find our work useful in your research, please consider citing:
   year={2019}  
 }
 ```
-
+```
+@article{lei2019octree,  
+  title={Octree guided CNN with Spherical Kernels for 3D Point Clouds},  
+  author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
+  journal={IEEE Conference on Computer Vision and Pattern Recognition},  
+  year={2019}  
+}  
+```
 ### License
 Our code is released under MIT License (see LICENSE file for details).
 
@@ -48,7 +47,7 @@ Please compile the cuda-based operations in tf-ops folder using the command
 
 ### Data Preparation
 You may need to install [Matlab](https://au.mathworks.com/products/matlab.html). It is required to preprocess the datasets, such as the grid-based downsampling.  
-Preprocessing each segmentation dataset using the corresponding function under folder **preprocessing**
+We preprocess each segmentation dataset using the corresponding function under the folder ***preprocessing***:
 ```
 preprocessing/shapenet_removeSingularPoints.m
 preprocessing/ruemonge2014_prepare_data.m.m
