@@ -47,7 +47,14 @@ Please compile the cuda-based operations in tf-ops folder using the command
 ```
 
 ### Data Preparation
-You may need to install [Matlab](https://au.mathworks.com/products/matlab.html). It is required to preprocess the datasets, such as the grid-based downsampling.
+You may need to install [Matlab](https://au.mathworks.com/products/matlab.html). It is required to preprocess the datasets, such as the grid-based downsampling.  
+Preprocessing each segmentation dataset using the corresponding function under folder *preprocess*
+```
+preprocessing/shapenet_removeSingularPoints.m
+preprocessing/ruemonge2014_prepare_data.m.m
+preprocessing/scannet_prepare_data.m
+preprocessing/s3dis_prepare_data.m
+```
 
 ### Trained models & results
 The trained models and our results on ShapeNet and S3DIS can be downloaded from [this link](https://drive.google.com/open?id=1-085Tp4RI3eNbZSlOUo7T_F2qcjB8JeE).
