@@ -61,68 +61,72 @@ The trained models and our results on ShapeNet and S3DIS can be downloaded from 
 ### Usage
 
 - ModelNet
-```
-cd io
-python make_tfrecord_modelnet.py 
-cd modelnet40_cls 
-python train_modelnet.py  
-python evaluate_modelnet.py --num_votes=12  
-```
+  * To train a model to classify the 40 object classes:
+    ```
+    cd io
+    python make_tfrecord_modelnet.py 
+    cd modelnet40_cls 
+    python train_modelnet.py  
+    ```
+  * To test the classification results:
+    ```
+    python evaluate_modelnet.py --num_votes=12  
+    ```
 
 - ShapeNet   
-  * train the ***Table*** Category
-```
-cd io   
-python make_tfrecord_shapenet.py    
-cd shapenet_seg   
-python train_shapenet.py --shape_name=Table 
-```
-test the ***Table*** Category with trained models
-```
-python evaluate_modelnet.py  --shape_name=Table  --model_name=xxxx    
-```
+  * To train a model to segment parts of the ***Table*** Category:
+    ```
+    cd io   
+    python make_tfrecord_shapenet.py    
+    cd shapenet_seg   
+    python train_shapenet.py --shape_name=Table 
+    ```
+  * To test thesegmentation performance of the trained model:
+    ```
+    python evaluate_modelnet.py  --shape_name=Table  --model_name=xxxx    
+    ```
 
 - RueMonge2014   
   * train 
-  ```
-  cd io 
-  python make_tfrecord_ruemonge2014.py    
-  cd ruemonge2014_seg    
-  python train_ruemonge2014.py  
-  ```
+    ```
+    cd io 
+    python make_tfrecord_ruemonge2014.py    
+    cd ruemonge2014_seg    
+    python train_ruemonge2014.py  
+    ```
   * test 
-  ```
-  python evaluate_ruemonge2014.py  --model_name=xxxx    
-  ```
+    ```
+    python evaluate_ruemonge2014.py  --model_name=xxxx    
+    ```
 
-* ScanNet V2   
+- ScanNet V2   
   Download the [ScanNet dataset](https://github.com/ScanNet/ScanNet).
   * train 
-  ```
-  cd io  
-  python make_tfrecord_scannet.py  
-  cd scannet_seg  
-  python train_scannet.py  
+    ```
+    cd io  
+    python make_tfrecord_scannet.py  
+    cd scannet_seg  
+    python train_scannet.py  
   ```
   * test 
-  ```
-  python evaluate_scannet_with_overlap.py  --model_name=xxxx    
-  python scannet_block2index_with_overlap.py    
-  ```
+    ```
+    python evaluate_scannet_with_overlap.py  --model_name=xxxx    
+    python scannet_block2index_with_overlap.py    
+    ```
 - S3DIS    
---train 
-```
-cd io  
-python make_tfrecord_s3dis.py    
-python make_tfrecord_s3dis_no_split.py    
-cd s3dis_seg  
-python train_s3dis.py    
-```
-test . 
-```
-python evaluate_s3dis_with_overlap.py --model_name=xxxx    
-python s3dis_block2index_with_overlap.py
-```
+  * train  
+    ```
+    cd io  
+    python make_tfrecord_s3dis.py    
+    python make_tfrecord_s3dis_no_split.py    
+    cd s3dis_seg  
+    python train_s3dis.py    
+    ```
+  * test   
+    ```
+    python evaluate_s3dis_with_overlap.py --model_name=xxxx    
+    python s3dis_block2index_with_overlap.py
+    ```
 ### Merging
 The datasets are trained and tested with smaller blocks. We merge them back into complete scenes using functions in the folder **post-merging** in Matlab.
 ```
