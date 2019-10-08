@@ -66,8 +66,8 @@ python make_tfrecord_scannet.py
 python make_tfrecord_s3dis.py    
 python make_tfrecord_s3dis_no_split.py 
 ```
-### Usage
-  All of the trained models and our results on ShapeNet and S3DIS can be downloaded from [this link]    (https://drive.google.com/open?id=1-085Tp4RI3eNbZSlOUo7T_F2qcjB8JeE).
+### Usage  
+All of the trained models and our results on ShapeNet and S3DIS can be downloaded from [this link](https://drive.google.com/open?id=1-085Tp4RI3eNbZSlOUo7T_F2qcjB8JeE).
 - ModelNet
   * To train a model to classify the 40 object classes:
     ```
