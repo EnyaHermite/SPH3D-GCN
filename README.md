@@ -14,7 +14,7 @@ In our graph networks, each vertex is associated with a single point location an
 Analogous to the standard CNNs, we define pooling and unpooling operations for our network. 
 We demonstrate the effectiveness of the proposed spherical kernel with graph neural networks for point cloud classification and semantic segmentation using ModelNet, **ShapeNet, RueMonge2014, ScanNet and S3DIS datasets**.
 
-In this repository, we release code and trained models for classification and segmentation.
+In this repository, we release the code and trained models for classification and segmentation.
 
 ### Citation
 If you find our work useful in your research, please consider citing:
