@@ -48,7 +48,7 @@ Please compile the cuda-based operations in tf-ops folder using the command
 
 ### Data Preparation
 You may need to install [Matlab](https://au.mathworks.com/products/matlab.html). It is required to preprocess the datasets, such as the grid-based downsampling.  
-Preprocessing each segmentation dataset using the corresponding function under folder *preprocess*
+Preprocessing each segmentation dataset using the corresponding function under folder **preprocessing**
 ```
 preprocessing/shapenet_removeSingularPoints.m
 preprocessing/ruemonge2014_prepare_data.m.m
@@ -71,56 +71,67 @@ python evaluate_modelnet.py --num_votes=12
 ```
 
 - ShapeNet   
-Preprocess in Matlab with   
-```preprocessing/shapenet_removeSingularPoints.m``` 
+train the ***Table*** Category
 ```
 cd io   
 python make_tfrecord_shapenet.py    
 cd shapenet_seg   
-python train_shapenet.py --shape_name=Table    
-python evaluate_modelnet.py  
+python train_shapenet.py --shape_name=Table 
+```
+test the ***Table*** Category with trained models
+```
+python evaluate_modelnet.py  --shape_name=Table  --model_name=xxxx    
 ```
 
 - RueMonge2014   
-Preprocess in Matlab with   
-  ```preprocessing/ruemonge2014_prepare_data.m```
+train . 
 ```
 cd io 
 python make_tfrecord_ruemonge2014.py    
 cd ruemonge2014_seg    
 python train_ruemonge2014.py  
-python evaluate_ruemonge2014.py  
+```
+test . 
+```
+python evaluate_ruemonge2014.py  --model_name=xxxx    
 ```
 
 - ScanNet V2   
 Download the [ScanNet dataset](https://github.com/ScanNet/ScanNet).
-prepare the dataset by running the following function in Matlab:  
-```preprocessing/scannet_prepare_data.m```
-
+train . 
 ```
 cd io  
 python make_tfrecord_scannet.py  
 cd scannet_seg  
 python train_scannet.py  
-python evaluate_scannet_with_overlap.py  
+```
+test . 
+```
+python evaluate_scannet_with_overlap.py  --model_name=xxxx    
 python scannet_block2index_with_overlap.py    
 ```
 merge the block predictions into complete scenes by running the following function in Matlab:
 ```post-merging/scannet_merge.m```
 
 - S3DIS    
-prepare the dataset by running the following function in Matlab:  
-```preprocessing/s3dis_prepare_data.m```
+train . 
 ```
 cd io  
 python make_tfrecord_s3dis.py    
 python make_tfrecord_s3dis_no_split.py    
 cd s3dis_seg  
 python train_s3dis.py    
+```
+test . 
+```
 python evaluate_s3dis_with_overlap.py --model_name=xxxx    
 python s3dis_block2index_with_overlap.py
 ```
-merge the block predictions into complete scenes by running the following function in Matlab:  
-```post-merging/s3dis_merge.m```
+### Merging
+The datasets are trained and tested with smaller blocks. We merge them back into complete scenes using functions in the folder **post-merging** in Matlab.
+```
+preprocessing/s3dis_prepare_data.m
+post-merging/s3dis_merge.m
+```
 
 # ...... ReadMe in construction ......
