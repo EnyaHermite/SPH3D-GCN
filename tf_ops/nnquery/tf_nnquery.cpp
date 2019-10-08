@@ -13,7 +13,7 @@ REGISTER_OP("BuildSphereNeighbor")
     .Attr("nn_sample: int")         // max number of neighbors sampled in the range
     .Input("database: float32")     // database points: batch * npoint * 3
     .Input("query: float32")        // query points: batch * mpoint * 3
-    .Output("nn_index: int32")      // neighbor and kernel bin indices: batch * mpoint * nn_sample
+    .Output("nn_index: int32")      // neighbor indices: batch * mpoint * nn_sample
     .Output("nn_count: int32")      // number of neighbors: batch * mpoint
     .Output("nn_dist: float32")     // distance to the neighbors: batch * mpoint * nn_sample
     .SetShapeFn([](::tensorflow::shape_inference::InferenceContext* c) {
