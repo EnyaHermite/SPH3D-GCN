@@ -70,7 +70,7 @@ python evaluate_modelnet.py --num_votes=12
 ```
 
 - ShapeNet   
-train the ***Table*** Category
+  * train the ***Table*** Category
 ```
 cd io   
 python make_tfrecord_shapenet.py    
@@ -84,31 +84,31 @@ python evaluate_modelnet.py  --shape_name=Table  --model_name=xxxx
 
 - RueMonge2014   
   * train 
-```
-cd io 
-python make_tfrecord_ruemonge2014.py    
-cd ruemonge2014_seg    
-python train_ruemonge2014.py  
-```
+  ```
+  cd io 
+  python make_tfrecord_ruemonge2014.py    
+  cd ruemonge2014_seg    
+  python train_ruemonge2014.py  
+  ```
   * test 
-```
-python evaluate_ruemonge2014.py  --model_name=xxxx    
-```
+  ```
+  python evaluate_ruemonge2014.py  --model_name=xxxx    
+  ```
 
 * ScanNet V2   
-Download the [ScanNet dataset](https://github.com/ScanNet/ScanNet).
+  Download the [ScanNet dataset](https://github.com/ScanNet/ScanNet).
   * train 
-```
-cd io  
-python make_tfrecord_scannet.py  
-cd scannet_seg  
-python train_scannet.py  
-```
+  ```
+  cd io  
+  python make_tfrecord_scannet.py  
+  cd scannet_seg  
+  python train_scannet.py  
+  ```
   * test 
-```
-python evaluate_scannet_with_overlap.py  --model_name=xxxx    
-python scannet_block2index_with_overlap.py    
-```
+  ```
+  python evaluate_scannet_with_overlap.py  --model_name=xxxx    
+  python scannet_block2index_with_overlap.py    
+  ```
 - S3DIS    
 --train 
 ```
