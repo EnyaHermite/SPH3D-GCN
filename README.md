@@ -68,7 +68,7 @@ python make_tfrecord_s3dis_no_split.py
 ```
 ### Usage  
 All of the trained models and our results on ShapeNet and S3DIS can be downloaded from [this link](https://drive.google.com/open?id=1-085Tp4RI3eNbZSlOUo7T_F2qcjB8JeE).
-- ModelNet
+- **ModelNet***
   * To train a model to classify the 40 object classes:
     ```
     cd modelnet40_cls 
@@ -79,7 +79,7 @@ All of the trained models and our results on ShapeNet and S3DIS can be downloade
     python evaluate_modelnet.py --num_votes=12  
     ```
 
-- ShapeNet   
+- **ShapeNet**   
   * To train a model to segment parts of the ***Table*** Category:
     ```
     cd shapenet_seg   
@@ -90,7 +90,7 @@ All of the trained models and our results on ShapeNet and S3DIS can be downloade
     python evaluate_modelnet.py  --shape_name=Table  --model_name=xxxx    
     ```
 
-- RueMonge2014   
+- **RueMonge2014**   
   * train 
     ```
     cd ruemonge2014_seg    
@@ -101,7 +101,7 @@ All of the trained models and our results on ShapeNet and S3DIS can be downloade
     python evaluate_ruemonge2014.py  --model_name=xxxx    
     ```
 
-- ScanNet V2   
+- **ScanNet V2**   
   Download the [ScanNet dataset](https://github.com/ScanNet/ScanNet).
   * train 
     ```  
@@ -113,7 +113,8 @@ All of the trained models and our results on ShapeNet and S3DIS can be downloade
     python evaluate_scannet_with_overlap.py  --model_name=xxxx    
     python scannet_block2index_with_overlap.py    
     ```
-- S3DIS    
+- **S3DIS**    
+  Download the [S3DIS dataset](http://buildingparser.stanford.edu/dataset.html).
   * train  
     ```   
     cd s3dis_seg  
