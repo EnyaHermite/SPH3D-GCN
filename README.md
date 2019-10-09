@@ -126,7 +126,7 @@ All of the trained models and our results on ShapeNet and S3DIS can be downloade
     python s3dis_block2index_with_overlap.py
     ```
 ### Merging
-The datasets are trained and tested with small blocks. We merge them back into complete scenes using functions under the folder ***post-merging*** in Matlab.
+The datasets are trained and tested with split blocks. We merge them back into complete scenes using functions under the folder ***post-merging*** in Matlab.
 ```
 post-merging/scannet_merge.m
 post-merging/s3dis_merge.m
