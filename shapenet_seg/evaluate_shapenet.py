@@ -47,7 +47,7 @@ spec = importlib.util.spec_from_file_location('',os.path.join(LOG_DIR,FLAGS.conf
 net_config = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(net_config)
 
-resultDir = 'shapenet_seg/%s_results'%(FLAGS.shape_name)
+resultDir = '%s_results'%(FLAGS.shape_name)
 if not os.path.exists(resultDir):
     os.mkdir(resultDir)
 
@@ -270,7 +270,7 @@ def eval_one_epoch(sess, ops, next_test_element):
 
                 pred_gt = np.concatenate([np.reshape(pred_label, (-1, 1)),
                                           np.reshape(batch_gt_label[b], (-1, 1))], axis=1)
-                np.savetxt('shapenet_seg/%s_results/%d.txt'%(shape_name,batch_idx*BATCH_SIZE+b),
+                np.savetxt('%s_results/%d.txt'%(shape_name,batch_idx*BATCH_SIZE+b),
                            pred_gt, fmt='%d')
 
                 part_ious = [0.0 for _ in range(NUM_CLASSES)]
