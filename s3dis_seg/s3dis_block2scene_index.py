@@ -56,7 +56,7 @@ def parse_fn(item):
             'index_label':tf.FixedLenFeature([], dtype=tf.string),
             'scene_label': tf.FixedLenFeature([], dtype=tf.int64)})
 
-    index_label = tf.decode_raw(features['index_label'], tf.int64)
+    index_label = tf.decode_raw(features['index_label'], tf.int32)
     index_label = tf.reshape(index_label, [-1, 1])
     index_label = tf.cast(index_label,tf.float32)
 
@@ -102,7 +102,7 @@ if __name__ == "__main__":
                     num = np.int32(BLOCK2SCENE[batch_idx*BATCH_SIZE+b][-1])
                     temp_out_data = padded_all[b, 0:num, -1]
                     print(temp_out_data.shape)
-                    scene_name = BLOCK2SCENE[batch_idx*BATCH_SIZE+b][0]
+                    scene_name = BLOCK2SCENE[batch_idx*BATCH_SIZE+b][1]
                     block_name = '%s_%d.mat'%(scene_name, batch_idx*BATCH_SIZE+b)
                     print(os.path.join(LOG_DIR, 'block_index', block_name))
                     sio.savemat(os.path.join(LOG_DIR, 'block_index', block_name), {'index':temp_out_data})
