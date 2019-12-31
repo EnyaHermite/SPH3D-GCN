@@ -39,9 +39,9 @@ for i = 1:numel(Builds)
         load(fullfile(pred_files(k).folder,pred_files(k).name));
         load(fullfile(strrep(pred_files(k).folder,matFolder,'block_index'),pred_files(k).name));
         
-        in_index = data(:,11)==1;
+        in_index = data(:,8)==1;
         inner_pt = data(in_index,1:3);
-        pred_logits = data(in_index,12:end);
+        pred_logits = data(in_index,9:end);
         pred_logits = pred_logits./sqrt(sum(pred_logits.^2,2)); % normlize to unit vector
         pred_logits = exp(pred_logits)./sum(exp(pred_logits),2); % further normlize to probability/confidence
         
