@@ -20,11 +20,11 @@ In this repository, we release the code and trained models for classification an
 If you find our work useful in your research, please consider citing:
 
 ```
-@article{lei2019spherical,  
+@article{lei2020spherical,  
   title={Spherical Kernel for Efficient Graph Convolution on 3D Point Clouds},  
   author={Lei, Huan and Akhtar, Naveed and Mian, Ajmal},  
-  journal={arXiv preprint arXiv:1909.09287},  
-  year={2019}  
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},  
+  year={2020}  
 }
 ```
 ```
