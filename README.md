@@ -4,7 +4,7 @@ Created by Huan Lei, Naveed Akhtar and Ajmal Mian
 ![alt text](https://github.com/hlei-ziyan/SPH3D-GCN/blob/master/image/intro_arch.png)
 
 ### Introduction
-This work is based on our **significant** [TPAMI extension](https://arxiv.org/abs/1909.09287) of [the original paper](http://openaccess.thecvf.com/content_CVPR_2019/html/Lei_Octree_Guided_CNN_With_Spherical_Kernels_for_3D_Point_Clouds_CVPR_2019_paper.html) presented in IEEE CVPR2019.
+[This work](https://arxiv.org/abs/1909.09287) is a **significant** extension of [our original paper](http://openaccess.thecvf.com/content_CVPR_2019/html/Lei_Octree_Guided_CNN_With_Spherical_Kernels_for_3D_Point_Clouds_CVPR_2019_paper.html) presented in IEEE CVPR2019, which is accepted to TPAMI in March 2020.
 
 We propose a spherical kernel for efficient graph convolution of 3D point clouds. 
 Our metric-based kernels systematically quantize the local 3D space 
