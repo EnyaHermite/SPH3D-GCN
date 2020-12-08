@@ -89,8 +89,7 @@ def get_model(points, cls_label, num_cls, is_training, config=None):
         intra_idx, intra_cnt, intra_dst, \
         inter_idx, inter_cnt, inter_dst = s3g_util.build_graph_deconv(xyz, xyz_unpool,
                                                                       config.radius[l],
-                                                                      config.nn_uplimit[l],
-                                                                      nnsearch=config.nnsearch)
+                                                                      config.nn_uplimit[l])
         filt_idx = s3g_util.spherical_kernel(xyz, xyz, intra_idx, intra_cnt,
                                              intra_dst, config.radius[l], kernel=config.kernel)
         net = _separable_conv3d_block(net, config.channels[l], config.binSize, intra_idx, intra_cnt,
