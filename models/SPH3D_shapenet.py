@@ -49,9 +49,7 @@ def get_model(points, num_cls, is_training, config=None):
     for l in range(len(config.radius)):
         intra_idx, intra_cnt, \
         intra_dst, indices = s3g_util.build_graph(xyz, config.radius[l], config.nn_uplimit[l],
-                                                  config.num_sample[l], curv=None,
-                                                  nnsearch=config.nnsearch, multi_scale=config.multiscale,
-                                                  keypt_type=config.keypoint, sample_method=config.sample)
+                                                  config.num_sample[l], sample_method=config.sample)
         filt_idx = s3g_util.spherical_kernel(xyz, xyz, intra_idx, intra_cnt,
                                                    intra_dst, config.radius[l],
                                                    kernel=config.kernel)
@@ -88,8 +86,7 @@ def get_model(points, num_cls, is_training, config=None):
         intra_idx, intra_cnt, intra_dst, \
         inter_idx, inter_cnt, inter_dst = s3g_util.build_graph_deconv(xyz, xyz_unpool,
                                                                       config.radius[l],
-                                                                      config.nn_uplimit[l],
-                                                                      nnsearch=config.nnsearch)
+                                                                      config.nn_uplimit[l])
         filt_idx = s3g_util.spherical_kernel(xyz, xyz, intra_idx, intra_cnt,
                                                    intra_dst, config.radius[l], kernel=config.kernel)
         net = _separable_conv3d_block(net, config.channels[l], config.binSize, intra_idx, intra_cnt,
@@ -124,4 +121,3 @@ def get_loss(pred, label, end_points):
     tf.summary.scalar('classify loss', classify_loss)
     tf.add_to_collection('losses', classify_loss)
     return classify_loss
-
